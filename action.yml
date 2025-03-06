@@ -11,8 +11,7 @@ runs:
   using: 'composite'
   steps:
     - name: Run multiple commands
-      run: ./script.sh
+      run: |
+        ./script.sh ${{ inputs.name }}
       shell: bash
-      with:
-        name: ${{ inputs.name }}
 
