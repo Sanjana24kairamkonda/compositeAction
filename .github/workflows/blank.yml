@@ -1,0 +1,19 @@
+name: Composite Action Example
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run composite action
+        uses: ./my-composite-action
+        with:
+          name: 'Sanjana'
